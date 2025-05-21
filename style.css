@@ -1,0 +1,84 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "cormorant garamond", "serif";
+}
+
+::selection {
+  background-color: #d6a97a; /* fons de selecció */
+  color: #f5ebdd; /* color del text seleccionat */
+}
+
+body {
+  background-color: #f5ebdd;
+}
+
+.text {
+  color: #5e5147;
+}
+
+.title {
+  color: #5e5147;
+}
+
+.subtitle {
+  color: #8c5e3c;
+}
+
+.highlight {
+  color: #8c5e3c;
+}
+
+.hero {
+  margin: 5em;
+  min-height: 80vh;
+  max-height: 100vh;
+  background-color: #f5ebdd;
+  display: flex;
+  border: 5px solid;
+  padding: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  background-color: #f0dfcc;
+}
+
+.hero-content h1 {
+  color: #3e3e3e;
+}
+
+.hero-content h2 {
+  color: #b67b5b;
+}
+
+.hero img {
+  width: 700px;
+  height: auto;
+  border-radius: 50px;
+}
+
+.hero-content {
+  font-size: 3em;
+}
+
+/* Botó gran */
+.hero-button {
+  background-color: #8c5e3c;
+  color: #f5ebdd;
+  padding: 16px 32px;
+  font-size: 2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  width: fit-content;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.hero-button:hover {
+  background-color: #6e4525;
+  transform: scale(1.05); /* efecte subtil al passar el cursor */
+}
