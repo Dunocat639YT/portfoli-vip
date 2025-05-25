@@ -8,12 +8,16 @@
 }
 
 ::selection {
-  background-color: #d6a97a; /* fons de selecció */
-  color: #f5ebdd; /* color del text seleccionat */
+  background-color: #d6a97a;
+  color: #f5ebdd;
 }
 
 body {
   background-color: #f5ebdd;
+  background-image: url("images/fons2.jpeg");
+  background-size: contain;
+  background-repeat: repeat;
+  background-blend-mode: multiply;
 }
 
 .text {
@@ -22,24 +26,20 @@ body {
 
 .title {
   color: #5e5147;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: bold;
   text-align: center;
 }
 
 .subtitle {
   color: #8c5e3c;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-style: italic;
   text-align: center;
 }
 
-.highlight {
-  color: #8c5e3c;
-}
-
 .hero {
-  margin: 5em;
+  margin: clamp(1em, 5vw, 5em);
   min-height: 80vh;
   max-height: 100vh;
   display: flex;
@@ -62,17 +62,22 @@ body {
 }
 
 .hero-image img {
-  width: 700px;
-  height: auto;
+  width: 100%;
+  max-width: clamp(250px, 80vw, 700px);
   border-radius: 50px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.hero-image img:hover {
+  transform: scale(1.05);
+  cursor: zoom-in;
+  box-shadow: 0 10px 20px rgba(255, 165, 79, 0.6);
 }
 
 .hero-content {
   font-size: 3em;
 }
 
-/* Botó gran */
 .hero-button {
   background-color: #8c5e3c;
   color: #f5ebdd;
@@ -89,7 +94,7 @@ body {
 
 .hero-button:hover {
   background-color: #6e4525;
-  transform: scale(1.05); /* efecte subtil al passar el cursor */
+  transform: scale(1.05);
 }
 
 hr.separador {
@@ -99,53 +104,277 @@ hr.separador {
   margin: 30px 0;
 }
 
-/* Afegim més espai a la galeria general */
-#galeria {
-  padding: 2rem; /* Espai interior de 2 rem per als costats */
-  max-width: 1200px; /* Limita l'ample màxim de la galeria */
-  margin: 0 auto; /* Centra la galeria a la pàgina */
+.galeria {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-/* Cada obra té el seu fons propi, com una targeta */
-#galeria > div > div {
-  background-color: #f9f9f9; /* Fons suau per separar visualment */
-  padding: 2rem; /* Espai interior dins de cada obra */
-  margin-bottom: 3rem; /* Espai entre obres */
-  border-radius: 12px; /* Cantonades arrodonides */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra suau */
+.galeria > div > div {
+  background-color: #f5e7d4;
+  padding: 2rem;
+  margin-bottom: 8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Imatges normals (no duo) — més grans i centrades */
-#galeria img {
-  width: auto; /* No forces que ocupi tot l’ample */
-  max-width: 100%; /* Que no sobrepassi el contenidor */
-  max-height: 80vh; /* Limita l'alçada a un 80% de la pantalla */
-  height: auto; /* Manté la proporció original */
+.galeria img {
+  width: auto;
+  max-width: 100%;
+  max-height: 80vh;
+  height: auto;
   display: block;
   margin: 1rem auto;
   border-radius: 8px;
-  object-fit: contain; /* Assegura que no s’estiri de manera estranya */
+  object-fit: contain;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Contenidor d'una obra amb dues imatges (esbós + final) */
+.galeria img:hover {
+  transform: scale(1.05);
+  cursor: zoom-in;
+  box-shadow: 0 10px 20px rgba(255, 165, 79, 0.6);
+}
+
 .obra-duo {
-  display: flex; /* Posa els fills en fila horitzontal */
-  flex-wrap: wrap; /* Si no hi ha espai, passen a la línia següent */
-  gap: 2rem; /* Espai entre les dues imatges */
-  justify-content: center; /* Centra el conjunt en l'eix horitzontal */
-  margin-top: 1rem; /* Espai amb el contingut de dalt */
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin: 2em 0;
+  flex-wrap: wrap;
 }
 
-/* Les dues parts (esbós i final) de l'obra duo */
 .obra-duo > div {
-  flex: 1 1 45%; /* Fa que ocupin aproximadament la meitat de l'espai */
-  text-align: center; /* Centra el text dins de cada columna */
+  flex: 1 1 45%;
+  text-align: center;
 }
 
-/* Imatges dins de les obres duo */
 .obra-duo img {
-  width: 100%; /* Fa que ocupin tot l'espai del seu div */
-  max-width: 600px; /* Però no més de 600px d'ample */
-  height: auto; /* Manté proporcions */
-  border-radius: 8px; /* Cantonades arrodonides */
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #8c5e3c;
+  color: #f5ebdd;
+  padding: 2rem 1rem;
+  margin-top: 4rem;
+  border-top: 4px solid #d6a97a;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.4);
+  font-size: 1.2rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-link {
+  color: #f5ebdd;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: #ffd2a2;
+  transform: scale(1.05);
+}
+
+.typewriter {
+  border-right: 2px solid #5e5147;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  width: 0;
+  animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+
+#subtitol.typewriter {
+  animation-delay: 3s;
+  animation-duration: 2.5s;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #5e5147;
+  }
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2em;
+    padding: 20px;
+  }
+
+  .hero-image img {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .hero-content {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .hero-button {
+    font-size: 1.5rem;
+    padding: 12px 24px;
+  }
+
+  .obra-duo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .obra-duo img {
+    width: 90%;
+    max-width: 400px;
+  }
+}
+
+/* RESPONSIVE PER A PANTALLES ESTRETES O QUADRADES */
+@media (max-width: 1000px) {
+  .hero {
+    flex-direction: column;
+    gap: 40px;
+    margin: 2em 1em;
+    padding: 20px;
+  }
+
+  .hero-image img {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .hero-content {
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .obra-duo {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .obra-duo img {
+    width: 90%;
+    max-width: 400px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .hero-button {
+    font-size: 1.5rem;
+    padding: 12px 24px;
+  }
+
+  footer .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.2rem;
+  }
+
+  .subtitle {
+    font-size: 1.5rem;
+  }
+
+  .hero-content {
+    font-size: 1.5em;
+  }
+
+  footer {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+  }
+  .hero-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero {
+    margin: 1em;
+    padding: 1em;
+    gap: 1em;
+  }
+
+  .hero-content {
+    font-size: 1.2em;
+  }
+
+  .hero-button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .hero-image img {
+    max-width: 100%;
+    border-radius: 20px;
+  }
 }

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Porfoli VIP</title>
+    <title>Porfoli VIP de Francesc - Dibuixos i il·lustracions del curs</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/godia.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
@@ -12,33 +13,31 @@
 <body>
 
     <header>
-        <div class="hero">
+        <div class="hero" id="inici">
 
             <div class="hero-image">
-                <img src="images/godia.webp" alt="foto">
+                <img src="images/dunocat.jpeg" alt="foto">
             </div>
 
             <div class="hero-content">
-                <h1>Hola, em dic <span>Francesc</span></h1>
-                <h2>I aquest és el meu portfoli</h2>
+                <h1><span class="typewriter" id="titol">Hola, em dic Francesc</span></h1>
+                <h2><span class="typewriter" id="subtitol">I aquest és el meu portfoli</span></h2>
                 <br>
-                <a class="hero-button" href="#galeria">Explora els meus dibuixos</a>
-
+                <a class="hero-button" href="#gallery">Explora els meus dibuixos</a>
             </div>
 
         </div>
 
-        <hr class="separador">
     </header>
 
 
     <main>
         
-        <section id="galeria">
+        <section class="galeria" id="gallery">
             
-            <div id="SDA1">
+            <div class="SDA1">
 
-                <div id="mostrat-món">
+                <div class="mostrat-món">
 
                     <h2 class="title">Control interdimensional</h2>
                     <h3 class="subtitle">Mostra't al món</h3>
@@ -57,20 +56,18 @@
 
                 </div>
 
-                <hr class="separador">
 
-                <div id="moix-partisà">
+                <div class="moix-partisà">
 
                     <h2 class="title">Moix partisà</h2>
-                    <h3 class="subtitle">Lluitava per menjar, per una manta calenta, i per fer fora els humans sorollosos del seu sofà. Segurament es va unir als partisans només perquè li oferien sardines de franc.</h3>
+                    <h3 class="subtitle">Lluitava per menjar, per una manta calenta, i per fer fora els humans sorollosos del seu sofà. Segurament es va unir als partisans només perquè li oferien sardines.</h3>
 
                     <img src="images/moix partisà.jpg" alt="moix partisà">
 
                 </div>
 
-                <hr class="separador">
 
-                <div id="interpretació-textures">
+                <div class="interpretació-textures">
 
                     <h2 class="title">Interpretació de textures</h2>
 
@@ -78,9 +75,8 @@
 
                 </div>
 
-                <hr class="separador">
                 
-                <div id="interpretació-emocions">
+                <div class="interpretació-emocions">
 
                     <h2 class="title">Interpretació d'emocions</h2>
 
@@ -88,9 +84,8 @@
 
                 </div>
 
-                <hr class="separador">
 
-                <div id="pneumococ">
+                <div class="pneumococ">
 
                     <h2 class="title">Recreació del pneumococ</h2>
                     <h3 class="subtitle">Part del projecte Marató de TV3 2024</h3>
@@ -109,9 +104,8 @@
 
                 </div>
 
-                <hr class="separador">
 
-                <div id="coronavirus">
+                <div class="coronavirus">
 
                     <h2 class="title">Recreació del Coronavirus</h2>
                     <h3 class="subtitle">Part del projecte Marató de TV3 2024</h3>
@@ -122,11 +116,10 @@
 
             </div>
 
-            <hr class="separador">
 
-            <div id="SDA2">
+            <div class="SDA2">
 
-                <div id="logo-esbós">
+                <div class="logo-esbós">
 
                     <h2 class="title">Esbós del logo "Water is Life"</h2>
 
@@ -134,9 +127,8 @@
 
                 </div>
 
-                <hr class="separador">
 
-                <div id="portal">
+                <div class="portal">
 
                     <h2 class="title">Portal a un món desconegut</h2>
                     <h3 class="subtitle">Art abstracte amb formes geomètriques</h3>
@@ -155,9 +147,8 @@
 
                 </div>
 
-                <hr class="separador">
 
-                <div id="abstracte">
+                <div class="abstracte">
 
                     <h2 class="title">Obra abstracta</h2>
                     <h3 class="subtitle">Feta en grup</h3>
@@ -168,11 +159,31 @@
 
             </div>
             
-
         </section>
 
     </main>
 
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <p>&copy; 2025 Francesc Pastó Fernández</p>
+                <p>3rB d'ESO | Visuals i Plàstica</p>
+            </div>
+
+            <div class="footer-center">
+                <p>Fet amb ❤️ només amb HTML i CSS</p>
+                <p>Inspiració, passió i una mica de café ☕</p>
+            </div>
+
+            <div class="footer-right">
+                <a href="#inici" class="footer-link">🔝 Torna a l'inici</a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
     
 </body>
 </html>
