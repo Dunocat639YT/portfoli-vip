@@ -4,7 +4,7 @@
   text-decoration: none;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  font-family: "cormorant garamond", "serif";
+  font-family: "cormorant garamond", serif;
 }
 
 ::selection {
@@ -22,10 +22,16 @@ body {
 
 .title {
   color: #5e5147;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .subtitle {
   color: #8c5e3c;
+  font-size: 2rem;
+  font-style: italic;
+  text-align: center;
 }
 
 .highlight {
@@ -36,14 +42,15 @@ body {
   margin: 5em;
   min-height: 80vh;
   max-height: 100vh;
-  background-color: #f5ebdd;
   display: flex;
-  border: 5px solid;
+  border: 5px inset #c2a487;
+  border-radius: 50px;
   padding: 40px;
   align-items: center;
   justify-content: center;
   gap: 100px;
   background-color: #f0dfcc;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .hero-content h1 {
@@ -54,10 +61,11 @@ body {
   color: #b67b5b;
 }
 
-.hero img {
+.hero-image img {
   width: 700px;
   height: auto;
   border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -76,9 +84,68 @@ body {
   width: fit-content;
   display: inline-block;
   transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hero-button:hover {
   background-color: #6e4525;
   transform: scale(1.05); /* efecte subtil al passar el cursor */
+}
+
+hr.separador {
+  border: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, #c2a487, transparent);
+  margin: 30px 0;
+}
+
+/* Afegim més espai a la galeria general */
+#galeria {
+  padding: 2rem; /* Espai interior de 2 rem per als costats */
+  max-width: 1200px; /* Limita l'ample màxim de la galeria */
+  margin: 0 auto; /* Centra la galeria a la pàgina */
+}
+
+/* Cada obra té el seu fons propi, com una targeta */
+#galeria > div > div {
+  background-color: #f9f9f9; /* Fons suau per separar visualment */
+  padding: 2rem; /* Espai interior dins de cada obra */
+  margin-bottom: 3rem; /* Espai entre obres */
+  border-radius: 12px; /* Cantonades arrodonides */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Ombra suau */
+}
+
+/* Imatges normals (no duo) — més grans i centrades */
+#galeria img {
+  width: auto; /* No forces que ocupi tot l’ample */
+  max-width: 100%; /* Que no sobrepassi el contenidor */
+  max-height: 80vh; /* Limita l'alçada a un 80% de la pantalla */
+  height: auto; /* Manté la proporció original */
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  object-fit: contain; /* Assegura que no s’estiri de manera estranya */
+}
+
+/* Contenidor d'una obra amb dues imatges (esbós + final) */
+.obra-duo {
+  display: flex; /* Posa els fills en fila horitzontal */
+  flex-wrap: wrap; /* Si no hi ha espai, passen a la línia següent */
+  gap: 2rem; /* Espai entre les dues imatges */
+  justify-content: center; /* Centra el conjunt en l'eix horitzontal */
+  margin-top: 1rem; /* Espai amb el contingut de dalt */
+}
+
+/* Les dues parts (esbós i final) de l'obra duo */
+.obra-duo > div {
+  flex: 1 1 45%; /* Fa que ocupin aproximadament la meitat de l'espai */
+  text-align: center; /* Centra el text dins de cada columna */
+}
+
+/* Imatges dins de les obres duo */
+.obra-duo img {
+  width: 100%; /* Fa que ocupin tot l'espai del seu div */
+  max-width: 600px; /* Però no més de 600px d'ample */
+  height: auto; /* Manté proporcions */
+  border-radius: 8px; /* Cantonades arrodonides */
 }

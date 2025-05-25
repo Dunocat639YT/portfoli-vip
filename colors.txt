@@ -1,0 +1,14 @@
+| Ús                                  | Nom estilitzat     | Hex       | Descripció                                                         |
+| ----------------------------------- | ------------------ | --------- | ------------------------------------------------------------------ |
+| **Fons de la pàgina**               | Paper natural      | #f5ebdd | Beige suau, com un paper vell però net                             |
+| **Fons del Hero**                   | Paper tenyit càlid | #f0dfcc | Un pel més fosc que el fons, per destacar sense trencar l'harmonia |
+| **Títol del Hero**                  | Marró elegant      | #3e3e3e | Gairebé negre, però amb calidesa                                   |
+| **Subtítol del Hero**               | Taronja polsosa    | #b67b5b | Recorda al fang sec, càlid i suau                                  |
+| **Títols dels dibuixos**            | Marró de tinta     | #5e5147 | Com si estigués escrit amb ploma                                   |
+| **Subtítols dels dibuixos**         | Terra suau         | #8c5e3c | Ideal per destacar lleugerament sense cridar massa l’atenció       |
+| **Text normal**                     | Gris-marró suau    | #5e5147 | Llegeix bé, manté la calidesa i no fereix la vista                 |
+| **Botons (color base)**             | Terra profunda     | #8c5e3c | Càlid, elegant, com un cuir envellit                               |
+| **Hover dels botons**               | Ombra de roure     | #6e4525 | Més fosc per donar sensació de profunditat                         |
+| **Color de text seleccionat**       | Beix intens        | #f5ebdd | Perquè es mantingui amb la mateixa vibe                            |
+| **Fons de selecció de text**        | Terracota suau     | #d6a97a | Com un pinzell d’aquarel·la d’un to terrós                         |
+| **Separadors / línies decoratives** | Marró clar vintage | #c2a487 | Serveix per fer línies fines entre seccions o sota títols          |
