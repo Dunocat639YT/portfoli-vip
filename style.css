@@ -70,7 +70,7 @@ body {
 }
 .hero-image img:hover {
   transform: scale(1.05);
-  cursor: zoom-in;
+  cursor: pointer;
   box-shadow: 0 10px 20px rgba(255, 165, 79, 0.6);
 }
 
@@ -133,7 +133,7 @@ hr.separador {
 
 .galeria img:hover {
   transform: scale(1.05);
-  cursor: zoom-in;
+  cursor: pointer;
   box-shadow: 0 10px 20px rgba(255, 165, 79, 0.6);
 }
 
